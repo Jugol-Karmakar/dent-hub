@@ -7,6 +7,9 @@ import { Link, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import SocialLogin from "../SocialLogin/SocialLogin";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -45,7 +48,7 @@ const Register = () => {
     e.preventDefault();
     await createUserWithEmailAndPassword(email, password);
     await updateProfile({ name });
-    alert("Updated profile &  verify your email");
+    toast("Updated profile &  verify your email");
   };
 
   return (
@@ -134,6 +137,7 @@ const Register = () => {
           />
         </div>
       </form>
+      <ToastContainer />
       <p className="text-base text-center mt-3 ">
         Already have an account?{" "}
         <Link className="text-orange-400 font-bold" to="/login">

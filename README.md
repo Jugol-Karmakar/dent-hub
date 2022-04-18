@@ -1,10 +1,16 @@
-# Getting Started with Create React App
+# Swish Dental
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## [Live Site Link](https://dentist-service-point.web.app/).
 
-## Available Scripts
+### Click Here to Live Link [https://dentist-service-point.web.app/](https://dentist-service-point.web.app/)
 
-In the project directory, you can run:
+## Works Done :
+
+- A simple Website individual who provides services.
+- Using dynamic route
+- Email Password Verification and firebase authentication
+- Using 4 route and one private route
+- Site are responsive and host firebse deploy
 
 ### `npm start`
 
