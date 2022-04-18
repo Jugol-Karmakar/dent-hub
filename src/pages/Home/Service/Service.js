@@ -13,13 +13,13 @@ const Service = (props) => {
       </div>
       <div className="p-4">
         <h2 className="text-2xl font-semibold">{name}</h2>
-        <p>{description}</p>
+        <p className="py-3 text-sm text-zinc-500">{description}</p>
         <p>price : ${price}</p>
       </div>
       <div>
         <button
           onClick={() => navigate("/checkout")}
-          className="w-full bg-green-700"
+          className="w-full bg-cyan-500 px-8 py-4 text-black font-bold"
         >
           Book Appoinment
         </button>

@@ -4,41 +4,41 @@
     "name": "General & family dentistry",
     "price": "400",
     "description": "Whether you need a routine cleaning, crown, or filling, the team at Swish will meet your general dentistry needs with quality, comfort-centric service. We are committed to providing you with progressive solutions to all dental services and only use the latest in technology, like low radiation x-rays and digital sensors, to ensure superior treatment.",
-    "img": "https://assets.website-files.com/6178312e621dc29857e9c3e5/617eba86cb23805b47097166_general-family-dentistry-thumbnail.jpg"
+    "img": "https://images.unsplash.com/photo-1571772996211-2f02c9727629?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
   },
   {
     "id": 2,
     "name": "Invisalign",
     "price": "300",
-    "description": "Gone are the days of wires, rubber bands and food stuck in brackets. We have partnered with Invisalign to provide a series of clear retainers that deliver proven results in less than half the time, at half the average cost, of traditional braces.",
-    "img": "https://assets.website-files.com/6178312e621dc29857e9c3e5/619be733e6d7383a35cb6600_Invisalign.jpg"
+    "description": "Gone are the days of wires, rubber bands and food  We are committed to providing you with progressive solutions stuck in brackets. We have partnered with Invisalign to provide a series of clear retainers that deliver proven results in less than half the time, like low radiation x-rays and digital sensors, to ensure superior treatment. at half the average cost, of traditional braces.",
+    "img": "https://images.unsplash.com/photo-1619987614890-4797e713fb03?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
   },
   {
     "id": 3,
     "name": "Cosmetic dentistry",
     "price": "350",
-    "description": "Leave our office with the smile you've always wanted, Swish's cosmetic experts can transform your smile with procedures like veneers, cosmetic contouring, and dental bonding. This is where our dentists become artists! Our Cosmetic Dentists are also certified to administer Botox for TMJ therapy.",
-    "img": "https://assets.website-files.com/6178312e621dc29857e9c3e5/617eba7fb292f845f799d5d1_cosmetic-dentistry-thumbnail.jpg"
+    "description": "Leave our office with the smile you've always  treatment. at half the average cost, of traditional braces. wanted, Swish's cosmetic experts can transform your smile with procedures like veneers, cosmetic contouring, and dental bonding. This is where our dentists become artists! Our Cosmetic Dentists are also certified to administer Botox for TMJ therapy.",
+    "img": "https://images.unsplash.com/photo-1609207825181-52d3214556dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
   },
   {
     "id": 4,
     "name": "Teeth whitening",
     "price": "280",
-    "description": "Let us brighten your smile! Our whitenings are both easy and non-invasive, and you can remove years of stain and color from your teeth in a single treatment. The question for you is, how white do you want your teeth to be? Natural white? Extra bright? Brilliant? Our dentists will show you your options.",
-    "img": "https://assets.website-files.com/6178312e621dc29857e9c3e5/619be72a6e76564baca33312_Teeth%20Whitening.jpg"
+    "description": "Let us brighten your smile! Our whitenings  how white do you want your teeth to be? Natural white are both easy and non-invasive, and you can remove years of stain and color from your teeth in a single treatment. The question for you is, how white do you want your teeth to be? Natural white? Extra bright? Brilliant? Our dentists will show you your options.",
+    "img": "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
   },
   {
     "id": 5,
     "name": "Specialty & Oral surgery",
     "price": "169",
-    "description": "Pesky wisdom teeth, dental implants, and more. Swish has partnered with the Doctors at Complete Specialty Solutions to provide the best care for all your oral surgery and specialty needs.",
-    "img": "https://assets.website-files.com/6178312e621dc29857e9c3e5/617eba683b542fd74c2decfc_dental-emergencies-thumbnail.jpg"
+    "description": "Pesky wisdom teeth, dental implants,  Swish has partnered with the Doctors at Complete Specialty Solutions to provide the best care for all your oral surgery and specialty and more. Swish has partnered with the Doctors at Complete Specialty Solutions to provide the best care for all your oral surgery and specialty needs.",
+    "img": "https://images.unsplash.com/photo-1562332328-13fe756de51a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
   },
   {
     "id": 6,
     "name": "Dental emergencies",
     "price": "300",
-    "description": "Even the best cared for teeth occasionally need a little help. Loose fillings, broken crowns, falling bridges, and more… no matter the need or emergency, Swish has you fully covered",
-    "img": "https://assets.website-files.com/6178312e621dc29857e9c3e5/619be70e6e0527565030a55a_Dental%20Emergencies.jpg"
+    "description": "Even the best cared for teeth occasionally oral surgery and specialtyneed a little help. Swish has partnered with the Doctors at Complete Specialty Solutions to provide the best care for all your oral surgery and specialtyneed a little help. Loose fillings, broken crowns, falling bridges, and more… no matter the need or emergency, Swish has you fully covered",
+    "img": "https://images.unsplash.com/photo-1581585004042-bca38021ce1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
   }
 ]
