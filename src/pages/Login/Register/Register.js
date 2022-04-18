@@ -7,11 +7,11 @@ import SocialLogin from "../SocialLogin/SocialLogin";
 const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confimrPassword, setConfirmPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   const navigate = useNavigate();
 
-  const [createUserWithEmailAndPassword, user, error] =
+  const [createUserWithEmailAndPassword, user] =
     useCreateUserWithEmailAndPassword(auth);
 
   const handelEmailBlur = (e) => {
@@ -30,7 +30,7 @@ const Register = () => {
   }
 
   const handelCreateUser = (e) => {
-    if (password !== confimrPassword) {
+    if (password !== confirmPassword) {
       return;
     }
     e.preventDefault();
@@ -57,6 +57,7 @@ const Register = () => {
             type="email"
             name="email"
             id=""
+            placeholder="Your Email"
             required
           />
         </div>
@@ -74,6 +75,7 @@ const Register = () => {
             type="password"
             name="password"
             id=""
+            placeholder="Your Password"
             required
           />
         </div>
@@ -90,6 +92,7 @@ const Register = () => {
             type="password"
             name="password"
             id=""
+            placeholder="Confirm Password"
             required
           />
         </div>
@@ -97,7 +100,7 @@ const Register = () => {
         <div className="text-center">
           <input
             onClick={() => createUserWithEmailAndPassword()}
-            className="bg-orange-500 text-white font-semibold px-12 py-2 rounded-full mt-4"
+            className="bg-cyan-500 text-white font-semibold px-12 py-2 rounded-full mt-4 cursor-pointer"
             type="submit"
             value="Register"
           />

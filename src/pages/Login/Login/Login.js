@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useSendPasswordResetEmail,
+  useSignInWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import SocialLogin from "../SocialLogin/SocialLogin";
@@ -10,6 +13,8 @@ const Login = () => {
 
   const [signInWithEmailAndPassword, user] =
     useSignInWithEmailAndPassword(auth);
+
+  const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -32,6 +37,12 @@ const Login = () => {
     e.preventDefault();
     signInWithEmailAndPassword(email, password);
   };
+
+  const resetPassword = async () => {
+    await sendPasswordResetEmail(email);
+    alert("Sent email");
+  };
+
   return (
     <div className="container min-h-screen m-auto w-1/3 border-2 px-8 mt-5 shadow-lg">
       <h2 className="text-3xl text-center text-cyan-500 font-semibold my-4">
@@ -52,6 +63,7 @@ const Login = () => {
             type="email"
             name="email"
             id=""
+            placeholder="Your Email"
             required
           />
         </div>
@@ -68,9 +80,20 @@ const Login = () => {
             type="password"
             name="password"
             id=""
+            placeholder="Your Password"
             required
           />
         </div>
+        <p className="py-2">
+          {" "}
+          <Link
+            onClick={resetPassword}
+            className="text-red-500 font-bold"
+            to="/login"
+          >
+            Reset Password
+          </Link>
+        </p>
 
         <div className="text-center">
           <input
@@ -80,10 +103,10 @@ const Login = () => {
             value="Login"
           />
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col mb-5">
           <p className="text-base text-center mt-3 ">Don't have an Account? </p>
           <Link
-            className="border-2 border-neutral-400 text-center bg-slate-50 p-3 mt-3  w-full rounded-full text-semibold  font-bold hover:bg-cyan-400"
+            className="border-2 border-neutral-400 text-center bg-slate-50 p-3 mt-3  w-full rounded-full text-semibold  font-bold hover:bg-cyan-500"
             to="/register"
           >
             Create New Account
