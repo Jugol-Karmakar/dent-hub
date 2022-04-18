@@ -1,7 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Service = (props) => {
   const { name, img, description, price } = props.service;
+
+  const navigate = useNavigate();
+
   return (
     <div className="shadow-lg bg-white rounded overflow-hidden">
       <div className="">
@@ -13,7 +17,12 @@ const Service = (props) => {
         <p>price : ${price}</p>
       </div>
       <div>
-        <button className="w-full bg-green-700">Book Appoinment</button>
+        <button
+          onClick={() => navigate("/checkout")}
+          className="w-full bg-green-700"
+        >
+          Book Appoinment
+        </button>
       </div>
     </div>
   );

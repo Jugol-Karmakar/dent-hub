@@ -14,7 +14,7 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const from = location.state?.from?.pathname || "/about";
+  const from = location.state?.from?.pathname || "/checkout";
 
   const handelEmailBlur = (e) => {
     setEmail(e.target.value);
@@ -33,7 +33,7 @@ const Login = () => {
     signInWithEmailAndPassword(email, password);
   };
   return (
-    <div className="container h-screen m-auto w-1/3 border-2 px-8 mt-5 shadow-lg">
+    <div className="container min-h-screen m-auto w-1/3 border-2 px-8 mt-5 shadow-lg">
       <h2 className="text-3xl text-center text-cyan-500 font-semibold my-4">
         Login PLease!!
       </h2>

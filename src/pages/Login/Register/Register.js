@@ -26,7 +26,7 @@ const Register = () => {
   };
 
   if (user) {
-    navigate("/about");
+    navigate("/checkout");
   }
 
   const handelCreateUser = (e) => {

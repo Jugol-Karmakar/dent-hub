@@ -25,7 +25,7 @@ const SocialLogin = () => {
   }
 
   if (user || user1) {
-    navigate("/about");
+    navigate("/checkout");
   }
 
   return (
