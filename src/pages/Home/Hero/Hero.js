@@ -15,8 +15,8 @@ const Hero = () => {
         </button>
         <p className="mt-4">Call Now : 2992746829</p>
       </div>
-      <div className="w-3/5">
-        <img className="w-full object-cover" src={hero} alt="" />
+      <div className=" w-3/5">
+        <img className="w-full  object-cover" src={hero} alt="" />
       </div>
     </div>
   );

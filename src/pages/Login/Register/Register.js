@@ -45,7 +45,7 @@ const Register = () => {
     e.preventDefault();
     await createUserWithEmailAndPassword(email, password);
     await updateProfile({ name });
-    alert("Updated profile");
+    alert("Updated profile &  verify your email");
   };
 
   return (
