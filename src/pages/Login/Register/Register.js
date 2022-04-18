@@ -1,10 +1,14 @@
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useCreateUserWithEmailAndPassword,
+  useUpdateProfile,
+} from "react-firebase-hooks/auth";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Register = () => {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -12,8 +16,13 @@ const Register = () => {
   const navigate = useNavigate();
 
   const [createUserWithEmailAndPassword, user] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
+  const [updateProfile, updating, error] = useUpdateProfile(auth);
+
+  const handelNameBlur = (e) => {
+    setName(e.target.value);
+  };
   const handelEmailBlur = (e) => {
     setEmail(e.target.value);
   };
@@ -29,21 +38,40 @@ const Register = () => {
     navigate("/checkout");
   }
 
-  const handelCreateUser = (e) => {
+  const handelCreateUser = async (e) => {
     if (password !== confirmPassword) {
       return;
     }
     e.preventDefault();
-    createUserWithEmailAndPassword(email, password);
+    await createUserWithEmailAndPassword(email, password);
+    await updateProfile({ name });
+    alert("Updated profile");
   };
 
   return (
-    <div className="container h-screen m-auto w-1/3 border-2 px-8 mt-5">
+    <div className="container min-h-screen m-auto w-1/3 border-2 px-8 mt-5">
       <h2 className="text-3xl text-center text-cyan-500 font-semibold my-4">
         Register PLease!!
       </h2>
       <SocialLogin></SocialLogin>
       <form onSubmit={handelCreateUser}>
+        <div className="mb-3">
+          <label
+            className="text-base text-black font-medium block pb-2"
+            htmlFor="Your Name"
+          >
+            Your Name
+          </label>
+          <input
+            onBlur={handelNameBlur}
+            className="w-full py-2 px-6 rounded-full outline-none border-b-2 focus:border-orange-400"
+            type="text"
+            name="text"
+            id=""
+            placeholder="Your Name"
+            required
+          />
+        </div>
         <div className="mb-3">
           <label
             className="text-base text-black font-medium block pb-2"

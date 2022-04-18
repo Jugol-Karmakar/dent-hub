@@ -22,7 +22,7 @@ const Header = () => {
         <Customlink to="/blogs">Blogs</Customlink>
         {user ? (
           <button
-            className="bg-cyan-400 py-2 px-5 rounded-full "
+            className=" border-2  px-3 rounded-full font-semibold hover:bg-cyan-400"
             onClick={handelSignOut}
           >
             Sign Out
