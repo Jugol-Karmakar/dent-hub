@@ -5,7 +5,7 @@ const Footer = () => {
   const today = new Date();
   const year = today.getFullYear();
   return (
-    <div className="flex justify-around bg-blue-200 py-6 mt-10 ">
+    <div className=" flex justify-around bg-blue-200 py-6">
       <div>
         <img className="h-6" src={logo} alt="" />
       </div>

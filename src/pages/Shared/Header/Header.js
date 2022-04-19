@@ -12,7 +12,7 @@ const Header = () => {
     signOut(auth);
   };
   return (
-    <div className="flex bg-slate-100 py-3 px-14 items-center justify-between sticky top-0">
+    <nav className="flex bg-slate-100 py-3 px-14 items-center justify-between sticky  top-0">
       <div>
         <img className="h-12" src={logo} alt="" />
       </div>
@@ -23,7 +23,7 @@ const Header = () => {
         <Customlink to="/blogs">Blogs</Customlink>
         {user ? (
           <button
-            className=" border-2  px-3 rounded-full font-semibold bg-cyan-400"
+            className="sm:block border-2  px-3 rounded-full font-semibold bg-cyan-400"
             onClick={handelSignOut}
           >
             Sign Out
@@ -32,7 +32,7 @@ const Header = () => {
           <Customlink to="/login">Login</Customlink>
         )}
       </div>
-    </div>
+    </nav>
   );
 };
 
