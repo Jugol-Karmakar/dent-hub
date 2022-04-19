@@ -10,7 +10,13 @@
 - Using dynamic route
 - Email Password Verification and firebase authentication
 - Using 4 route and one private route
+- using react icon.
 - Site are responsive and host firebse deploy
+- hosting firebase deploy and create a link
+
+## Technology Uses :
+
+In this project using 1 framework it's tailwind and \ libraries react router hooks,react router
 
 ### `npm start`
 

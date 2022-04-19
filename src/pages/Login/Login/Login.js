@@ -14,7 +14,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const [signInWithEmailAndPassword, user] =
+  const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
   const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
@@ -43,7 +43,7 @@ const Login = () => {
 
   const resetPassword = async () => {
     await sendPasswordResetEmail(email);
-    toast("Sent email and set Your password");
+    toast("Sent email and set your password");
   };
 
   return (
@@ -87,6 +87,7 @@ const Login = () => {
             required
           />
         </div>
+        <p>{error?.message}</p>
         <p className="py-2">
           {" "}
           <Link

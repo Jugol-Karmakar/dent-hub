@@ -21,7 +21,7 @@ const Register = () => {
   const [createUserWithEmailAndPassword, user] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
-  const [updateProfile, updating, error] = useUpdateProfile(auth);
+  const [updateProfile, updating] = useUpdateProfile(auth);
 
   const handelNameBlur = (e) => {
     setName(e.target.value);
@@ -48,7 +48,7 @@ const Register = () => {
     e.preventDefault();
     await createUserWithEmailAndPassword(email, password);
     await updateProfile({ name });
-    toast("Updated profile &  verify your email");
+    toast("Updated profile");
   };
 
   return (
@@ -138,7 +138,7 @@ const Register = () => {
         </div>
       </form>
       <ToastContainer />
-      <p className="text-base text-center mt-3 ">
+      <p className="text-base text-center mt-3 mb-5">
         Already have an account?{" "}
         <Link className="text-orange-400 font-bold" to="/login">
           Login
