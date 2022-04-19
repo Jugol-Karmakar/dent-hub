@@ -12,8 +12,9 @@ const Hero = () => {
           treat your smile , treat your soul
         </p>
 
-        <button className="text-base font-medium flex items-center  text-white bg-cyan-500  rounded-3xl hover:bg-cyan-400  py-2 px-5 mt-4">
-          <FaCalendarAlt className="text-orange-500 mr-2" /> BOOK AN APPOINTMENT
+        <button className="text-base font-medium flex items-center   text-white bg-cyan-500  rounded-3xl hover:bg-cyan-400  py-2 px-5 mt-4">
+          <FaCalendarAlt className="text-zinc-800 text-xl mr-2" /> BOOK AN
+          APPOINTMENT
         </button>
         <p className="mt-4 flex items-center">
           <FaPhoneAlt className="text-cyan-500 text-xl mr-2" /> Call Now :

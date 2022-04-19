@@ -33,10 +33,6 @@ const Register = () => {
     setConfirm(e.target.value);
   };
 
-  if (user) {
-    navigate("/checkout");
-  }
-
   const handelCreateUser = async (e) => {
     e.preventDefault();
 
@@ -47,6 +43,10 @@ const Register = () => {
     await createUserWithEmailAndPassword(email, password);
     toast("verify email");
   };
+
+  if (user) {
+    navigate("/");
+  }
 
   return (
     <div className="container min-h-screen m-auto w-1/3 border-2 px-8 mt-5 mb-8 shadow-lg">

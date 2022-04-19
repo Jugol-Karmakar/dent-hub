@@ -1,36 +1,25 @@
 import React, { useState } from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
-import auth from "../../firebase.init";
 import booking from "../../images/booking.jpeg";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Checkout = () => {
-  const [user] = useAuthState(auth);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [address, setAddress] = useState("");
-  const [phone, setPhone] = useState("");
-  const [time, setTime] = useState("");
+  const initialValues = { name: "", email: "", address: "", phone: "" };
+  const [formValues, setFormValues] = useState(initialValues);
 
-  const handelNameBlur = (e) => {
-    setName(e.target.value);
-  };
-
-  const handelEmailBlur = (e) => {
-    setEmail(e.target.value);
-  };
-  const handelAddressBlur = (e) => {
-    setAddress(e.target.value);
-  };
-
-  const handelPhoneBlur = (e) => {
-    setPhone(e.target.value);
+  const handelChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value });
+    console.log(formValues);
   };
 
   const handelCheckoutSubmit = (e) => {
     e.preventDefault();
+    toast("Thank You For Your Booking !!");
   };
+
   return (
-    <div className="container mx-auto grid grid-cols-2 mt-10 min-h-screen ">
+    <div className="container mx-auto grid lg:grid-cols-2 md:grid-cols-1 md:w-full  mt-10 min-h-screen ">
       <div className="">
         <img className="w-full h-96 object-cover" src={booking} alt="" />
       </div>
@@ -43,59 +32,61 @@ const Checkout = () => {
         <form onSubmit={handelCheckoutSubmit}>
           <div className="my-3 mx-6">
             <input
-              onBlur={handelNameBlur}
+              onChange={handelChange}
               className="py-2 px-2 outline-none rounded-md border-grey-400 border  w-full"
               type="text"
-              name="Name"
+              name="name"
               id=""
+              value={formValues.name}
               placeholder="Your Name"
               required
             />
           </div>
           <div className="my-3 mx-6">
             <input
-              onBlur={handelEmailBlur}
+              onChange={handelChange}
               className="py-2 px-2 outline-none rounded-md border-grey-400 border  w-full"
               type="email"
               name="email"
               id=""
+              value={formValues.email}
               placeholder="Your Email"
               required
             />
           </div>
           <div className="my-3 mx-6">
             <input
-              onBlur={handelAddressBlur}
+              onChange={handelChange}
               className="py-2 px-2 outline-none rounded-md border-grey-400 
             border 
              w-full"
               type="text"
-              name="text"
+              name="address"
               id=""
+              value={formValues.address}
               placeholder="Address"
               required
             />
           </div>
           <div className="my-3 mx-6">
             <input
-              onBlur={handelPhoneBlur}
+              onChange={handelChange}
               className="py-2 px-2 outline-none rounded-md border-grey-400 
             border 
              w-full"
               type="text"
-              name="text"
+              name="phone"
               id=""
+              value={formValues.phone}
               placeholder="Phone number"
               required
             />
           </div>
-
+          <ToastContainer />
           <div className=" flex justify-center mt-4 mb-5">
-            <input
-              className="bg-cyan-500 hover:bg-black hover:text-white rounded-full text-black px-8 py-2 font-semibold cursor-pointer"
-              type="submit"
-              value="Check Out"
-            ></input>
+            <button className="px-8 py-2 bg-cyan-500 text-lg rounded-full text-black font-bold hover:bg-black hover:text-white">
+              Start Book
+            </button>
           </div>
         </form>
       </div>

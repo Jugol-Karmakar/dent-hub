@@ -12,11 +12,11 @@ const Header = () => {
     signOut(auth);
   };
   return (
-    <nav className="flex bg-slate-100 py-3 px-14 items-center justify-between sticky  top-0">
+    <nav className=" bg-slate-100 py-3 px-14 flex items-center justify-between sticky  top-0">
       <div>
         <img className="h-12" src={logo} alt="" />
       </div>
-      <div className="flex">
+      <div className="md:flex md:items-center">
         <Customlink to="/">Home</Customlink>
         <Customlink to="/checkout">Checkout</Customlink>
         <Customlink to="/about">About</Customlink>
