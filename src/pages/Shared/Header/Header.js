@@ -18,11 +18,12 @@ const Header = () => {
       </div>
       <div className="flex">
         <Customlink to="/">Home</Customlink>
+        <Customlink to="/checkout">Checkout</Customlink>
         <Customlink to="/about">About</Customlink>
         <Customlink to="/blogs">Blogs</Customlink>
         {user ? (
           <button
-            className=" border-2  px-3 rounded-full font-semibold hover:bg-cyan-400"
+            className=" border-2  px-3 rounded-full font-semibold bg-cyan-400"
             onClick={handelSignOut}
           >
             Sign Out

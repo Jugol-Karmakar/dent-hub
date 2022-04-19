@@ -8,11 +8,15 @@ const Checkout = () => {
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
   const [phone, setPhone] = useState("");
+  const [time, setTime] = useState("");
 
   const handelNameBlur = (e) => {
     setName(e.target.value);
   };
 
+  const handelEmailBlur = (e) => {
+    setEmail(e.target.value);
+  };
   const handelAddressBlur = (e) => {
     setAddress(e.target.value);
   };
@@ -20,45 +24,42 @@ const Checkout = () => {
   const handelPhoneBlur = (e) => {
     setPhone(e.target.value);
   };
+  const handelTimeBlur = (e) => {
+    setTime(e.target.value);
+  };
 
-  const handelShippingSubmit = (e) => {
+  const handelCheckoutSubmit = (e) => {
     e.preventDefault();
   };
   return (
-    <div className="w-96 mx-auto border-2 rounded-lg mt-10">
+    <div className="w-96 mx-auto border-2 rounded-lg mt-10 h-screen shadow-lg">
       <h2 className="text-center pt-3 font-semibold text-xl">
-        Shipping Information
+        Booking Information
       </h2>
-      <form onSubmit={handelShippingSubmit}>
+      <form onSubmit={handelCheckoutSubmit}>
         <div className="my-3 mx-6">
-          <label className="block pb-1" htmlFor="name">
-            Name
-          </label>
           <input
             onBlur={handelNameBlur}
             className="py-1 px-2 outline-none rounded-md border-grey-400 border  w-full"
             type="text"
             name="Name"
             id=""
+            placeholder="Your Name"
             required
           />
         </div>
         <div className="my-3 mx-6">
-          <label className="block pb-1" htmlFor="email">
-            Email
-          </label>
           <input
+            onBlur={handelEmailBlur}
             className="py-1 px-2 outline-none rounded-md border-grey-400 border  w-full"
             type="email"
             name="email"
             id=""
+            placeholder="Your Email"
             required
           />
         </div>
         <div className="my-3 mx-6">
-          <label className="block pb-1" htmlFor="address">
-            Address
-          </label>
           <input
             onBlur={handelAddressBlur}
             className="py-1 px-2 outline-none rounded-md border-grey-400 
@@ -67,13 +68,11 @@ const Checkout = () => {
             type="text"
             name="text"
             id=""
+            placeholder="Address"
             required
           />
         </div>
         <div className="my-3 mx-6">
-          <label className="block pb-1" htmlFor="phone">
-            Phone
-          </label>
           <input
             onBlur={handelPhoneBlur}
             className="py-1 px-2 outline-none rounded-md border-grey-400 
@@ -82,15 +81,29 @@ const Checkout = () => {
             type="text"
             name="text"
             id=""
+            placeholder="Phone number"
+            required
+          />
+        </div>
+        <div className="my-3 mx-6">
+          <input
+            onBlur={handelTimeBlur}
+            className="py-1 px-2 outline-none rounded-md border-grey-400 
+            border 
+             w-full"
+            type="text"
+            name="text"
+            id=""
+            placeholder="Time Shedule"
             required
           />
         </div>
 
         <div className=" flex justify-center mt-9 px-6 mb-5">
           <input
-            className="bg-orange-500 text-white w-full py-2 text-semibold cursor-pointer"
+            className="bg-cyan-500 text-white w-full py-2 font-semibold cursor-pointer"
             type="submit"
-            value="Add Shipping"
+            value="Check Out"
           ></input>
         </div>
       </form>

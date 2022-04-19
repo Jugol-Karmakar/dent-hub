@@ -16,7 +16,7 @@
 
 ## Technology Uses :
 
-In this project using 1 framework it's tailwind and \ libraries react router hooks,react router
+In this project using 1 framework it's tailwind and libraries react router hooks,react router
 
 ### `npm start`
 
